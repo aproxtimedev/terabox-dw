@@ -5,9 +5,10 @@ export default async function handler(
     req: NextApiRequest,
     res: NextApiResponse
 ) {
+    const userAgent = req.headers['user-agent']
     const axiosClient = axios.create({
         headers: {
-            'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/110.0',
+            'User-Agent': userAgent,
             'Accept-Language': 'en-US,en;q=0.5',
             'Referer': 'https://www.terabox.com/sharing/link?surl=gfujeeyKv_ZGFd_dAJ3uXw',
             'Sec-Fetch-Dest': 'empty',
